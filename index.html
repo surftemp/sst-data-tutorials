@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sea Surface Temperature Daily Analysis: European Space Agency Climate Change Initiative product version 2.1</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Sea Surface Temperature Daily Analysis: European Space Agency Climate Change Initiative product version 2.1</h1>
+    <h2>Summary</h2>
+
+    Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longitude grid, with gaps between available daily observations filled by statistical means, spanning late 1981 to recent time.
+
+    Synthesised from multiple Earth orbiting satellites carrying infrared imagers from thousands of billions of individual measurements. Underlying observation resolution ranges from 1 to 20 km, and after gap filling the typical feature resolution is ~20 km. Suitable for large-scale oceanographic meteorological and climatological applications, such as evaluating or constraining environmental models or case-studies of marine heat wave events.
+
+    Adhering to community data standards and names. Includes temperature uncertainty information and auxiliary information about land-sea fraction and sea-ice coverage. To understand the data for your application, read the paper [1] using <a href="www.nature.com/articles/s41597-019-0236-x">www.nature.com/articles/s41597-019-0236-x</a> to cite in any published usage.
+
+    The v2.1 record is known to have biases associated with desert dust aerosol and erratic calibration of early-record sensors [1]. Adjustments to reduce these biases and include additional uncertainty in these effects have been developed, as described in [2] and are applied to this data. These adjustments operate on monthly and >5 degree time-space scales.
+
+    This data is hosted by <a href="https://aws.amazon.com/opendata/">Amazon AWS opendata</a>
+
+    <h2>Data structure</h2>
+
+    The data is organised into the following variables
+
+    <table>
+        <thead>
+        <tr>
+            <th>Variable name</th><th>Description</th><th>Units</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>analysed_sst</td><td>Analysed sea surface temperature (Kelvin)</td><td>kelvin</td>
+        </tr>
+         <tr>
+            <td>analysis_uncertainty</td><td>Estimated error standard deviation of analysed_sst</td><td>kelvin</td>
+        </tr>
+        <tr>
+            <td>sea_ice_fraction</td><td>The estimated fraction of the area covered by sea ice</td><td>-</td>
+        </tr>
+        <tr>
+            <td>mask</td><td>Bit mask (bit0:sea,bit1:land:bit2:lake,bit3:ice)</td><td>-</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Accessing the data</h2>
+
+    An example of how to access the data using python and the xarray library is:
+
+    <pre>
+        import xarray as xr
+        import matplotlib.pyplot as plt
+        import s3fs
+        s3 = s3fs.S3FileSystem(anon=True)
+        store = s3fs.S3Map(root="s3://surftemp-sst/data/sst.zarr", s3=s3, create=False)
+        sst_ds = xr.open_zarr(store)
+        # select an area covering the great barrier reef at a particular date
+        da = sst_ds["analysed_sst"].sel(time="2016-02-18",
+                lat=slice(-15.6,-10.69867),lon=slice(141.4,153.6))
+        da.plot(cmap="coolwarm")
+        plt.show() # need this if not running in a jupyter notebook
+    </pre>
+
+    <h2>References</h2>
+
+    <p>
+    [1] Merchant, C.J., Embury, O., Bulgin, C.E., Block, T., Corlett, G.K., Fiedler, E., Good, S.A., Mittaz, J., Rayner, N.A., Berry, D., Eastwood, S., Taylor, M., Tsushima, Y., Waterfall, A., Wilson, R. and Donlon, C. (2019), Satellite-based time-series of sea-surface temperature since 1981 for climate applications. Scientific Data 6, 223, doi:10.1038/s41597-019-0236-x
+    </p>
+
+    <p>
+    [2] Merchant, C.J. and Embury, O. (2020) Adjusting for desert-dust-related biases in a climate data record of sea surface temperature. Remote Sensing, 12 (16). 2554. ISSN 2072-4292 doi:10.3390/rs12162554
+    </p>
+
+    <h2>Tutorials</h2>
+
+    Tutorials are provided in the form of Jupyter Notebooks
+
+    <h3>Basics</h3>
+
+    Download and run <a href="tutorial1.ipynb">tutorial1.ipynb</a> for examples to help you get started with working with this dataset.
+
+    <h3>Worked Example - Marine Heatwaves</h3>
+
+    Download and run <a href="tutorial2.ipynb">tutorial2.ipynb</a> to work through a project which uses the dataset to analyse marine heatwaves.
+
+</body>
+</html>
