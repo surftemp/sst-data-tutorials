@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Sea Surface Temperature Daily Analysis: European Space Agency Climate Change Initiative product version 2.1</title>
     <style>
+        body {
+          font-family: sans-serif;
+          margin: 20px auto;
+          max-width: 1280px;
+        }
 
         table {
             border-collapse: collapse;
@@ -36,16 +41,27 @@
             border-bottom: 2px solid #009879;
         }
 
+        fieldset img {
+            margin: 5px;
+            height: 48px;
+        }
+
+        fieldset {
+           border-radius: 5px;
+        }
+
+        li {
+            margin: 10px;
+        }
 
     </style>
 </head>
 <body>
-    <img src="surftemp.png" width="320" style="float:right;"></img>
+    <img src="surftemp_logo.png" width="160" style="float:right;"></img>
     <h1>Sea Surface Temperature Daily Analysis: European Space Agency Climate Change Initiative product version 2.1</h1>
     <h2>Summary</h2>
 
-    <p>
-Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longitude grid, with gaps between available daily observations filled by statistical means, spanning late 1981 to recent time.
+    <p>Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longitude grid, with gaps between available daily observations filled by statistical means, spanning late 1981 to recent time.
     </p><p>
     Synthesised from multiple Earth orbiting satellites carrying infrared imagers from thousands of billions of individual measurements. Underlying observation resolution ranges from 1 to 20 km, and after gap filling the typical feature resolution is ~20 km. Suitable for large-scale oceanographic meteorological and climatological applications, such as evaluating or constraining environmental models or case-studies of marine heat wave events.
     </p><p>
@@ -99,6 +115,25 @@ Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longi
         plt.show() # need this if not running in a jupyter notebook
     </pre>
 
+    <h2>Tutorials</h2>
+
+    Tutorials are provided in the form of Jupyter Notebooks
+
+    <a name="tutorial1"></a><h3>Tutorial 1: Getting Started</h3>
+
+    Download and run <a href="tutorial1.ipynb">tutorial1.ipynb</a> for examples to help you get started with working with this dataset.
+
+    <a name="tutorial2"></a><h3>Tutorial 2: Worked Example - Marine Heatwaves</h3>
+
+    Download and run <a href="tutorial2.ipynb">tutorial2.ipynb</a> to work through a project which uses the dataset to analyse marine heatwaves.
+
+    <h2>Related Resources</h2>
+
+    <ul>
+        <li>A free-to-use service for obtaining regridded, timeseries or regional versions of this data is available at <a href="https://surftemp.net/">surftemp.net</a></li>
+        <li>This data applies a bias adjustment[2] to the dataset held at the Copernicus Climate Data Store: <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-sea-surface-temperature?tab=overview">Sea surface temperature daily data from 1981 to present derived from satellite observations</a></li>
+    </ul>
+
     <h2>References</h2>
 
     <p>
@@ -109,17 +144,21 @@ Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longi
     [2] Merchant, C.J. and Embury, O. (2020) Adjusting for desert-dust-related biases in a climate data record of sea surface temperature. Remote Sensing, 12 (16). 2554. ISSN 2072-4292 doi:10.3390/rs12162554
     </p>
 
-    <h2>Tutorials</h2>
-
-    Tutorials are provided in the form of Jupyter Notebooks
-
-    <h3>Basics</h3>
-
-    Download and run <a href="tutorial1.ipynb">tutorial1.ipynb</a> for examples to help you get started with working with this dataset.
-
-    <h3>Worked Example - Marine Heatwaves</h3>
-
-    Download and run <a href="tutorial2.ipynb">tutorial2.ipynb</a> to work through a project which uses the dataset to analyse marine heatwaves.
-
+    <fieldset>
+                    <legend>Supported By</legend>
+                    <a target="_blank" href="https://www.reading.ac.uk/met/"><img src="images/legacy-uor-home.png"
+                                                                                 alt="University of Reading Logo"
+                                                                                 class="footer_image"/></a>
+                    <a target="_blank" href="https://www.esa.int/"><img src="images/esa_cci_logo.jpeg"
+                                                                               alt="ESA CCI Logo" class="footer_image"/></a>
+                    <a target="_blank" href="https://climate.esa.int/en/projects/sea-surface-temperature/"><img src="images/esa_cci_sst.gif"
+                                                                               alt="ESA CCI SST Logo" class="footer_image"/></a>
+                    <a target="_blank" href="https://www.nceo.ac.uk/"><img src="images/nceo_img_logo_purple.svg"
+                                                                           alt="NERC Logo" class="footer_image"/></a>
+                    <a target="_blank" href="https://nerc.ukri.org/"><img src="images/nerc-long-logo-261.png" alt="NCEO Logo"
+                                                                          class="footer_image"/></a><a target="_blank"
+                                                                                                       href="https://stfc.ukri.org/"><img
+                        src="images/STFCMediumColourTrans.png" alt="STFC Logo" class="footer_image"/></a>
+    </fieldset>
 </body>
 </html>
