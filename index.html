@@ -60,17 +60,20 @@
 <body>
     <img src="surftemp_logo.png" width="160" style="float:right;"></img>
     <h1>Sea Surface Temperature Daily Analysis: European Space Agency Climate Change Initiative product version 2.1</h1>
-    <h2>Summary</h2>
+
+    This page provides information and resources on using a dataset of gap-filled daily mean sea surface temperatures from 1981 to the present day, hosted by AWS opendata.
+
+    <h2>Data Summary</h2>
 
     <p>Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longitude grid, with gaps between available daily observations filled by statistical means, spanning late 1981 to recent time.
     </p><p>
     Synthesised from multiple Earth orbiting satellites carrying infrared imagers from thousands of billions of individual measurements. Underlying observation resolution ranges from 1 to 20 km, and after gap filling the typical feature resolution is ~20 km. Suitable for large-scale oceanographic meteorological and climatological applications, such as evaluating or constraining environmental models or case-studies of marine heat wave events.
     </p><p>
-    Adhering to community data standards and names. Includes temperature uncertainty information and auxiliary information about land-sea fraction and sea-ice coverage. To understand the data for your application, read the paper [1] using <a href="www.nature.com/articles/s41597-019-0236-x">www.nature.com/articles/s41597-019-0236-x</a> to cite in any published usage.
+    Adhering to community data standards and names. Includes temperature uncertainty information and auxiliary information about land-sea fraction and sea-ice coverage. To understand the data for your application, read the paper [1] using <a href="www.nature.com/articles/s41597-019-0236-x" target="_blank">www.nature.com/articles/s41597-019-0236-x</a> to cite in any published usage.
     </p><p>
     The v2.1 record is known to have biases associated with desert dust aerosol and erratic calibration of early-record sensors [1]. Adjustments to reduce these biases and include additional uncertainty in these effects have been developed, as described in [2] and are applied to this data. These adjustments operate on monthly and >5 degree time-space scales.
     </p><p>
-    This data is available on the Registry of Open Data on AWS.
+        This data is available on the <a href="https://registry.opendata.aws/surftemp-sst/" target="_blank">Registry of Open Data on AWS</a>.
     </p>
     <h2>Data structure</h2>
 
@@ -100,7 +103,7 @@
 
     <h2>Accessing the data</h2>
 
-    An example of how to access the data using python and the xarray library is:
+    An example code snippet showing how to access the data using python and the xarray library:
 
     <pre>
         import xarray as xr
@@ -116,9 +119,9 @@
         plt.show() # need this if not running in a jupyter notebook
     </pre>
 
-    <h2>Tutorials</h2>
+    <h2 name="tutorials">Tutorials</h2>
 
-    Tutorials are provided in the form of Jupyter Notebooks
+    Tutorials are provided in the form of Jupyter Notebooks and provide more examples of how to access and use the data.
 
     <a name="tutorial1"></a><h3>Tutorial 1: Getting Started</h3>
 
@@ -131,8 +134,8 @@
     <h2>Related Resources</h2>
 
     <ul>
-        <li>A free-to-use service for obtaining regridded, timeseries or regional versions of this data is available at <a href="https://surftemp.net/">surftemp.net</a></li>
-        <li>This data applies a bias adjustment[2] to the dataset held at the Copernicus Climate Data Store: <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-sea-surface-temperature?tab=overview">Sea surface temperature daily data from 1981 to present derived from satellite observations</a></li>
+        <li>A free-to-use service for obtaining regridded, timeseries or regional versions of this data is available at <a href="https://surftemp.net/" target="_blank">surftemp.net</a></li>
+        <li>This data applies a bias adjustment[2] to the dataset held at the Copernicus Climate Data Store: <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-sea-surface-temperature?tab=overview" target="_blank">Sea surface temperature daily data from 1981 to present derived from satellite observations</a></li>
     </ul>
 
     <h2>References</h2>
@@ -146,17 +149,17 @@
     </p>
 
     <fieldset>
-                    <legend>Supported By</legend>
-                    <a target="_blank" href="https://www.reading.ac.uk/met/"><img src="images/legacy-uor-home.png"
+        <legend>Supported By</legend>
+        <a target="_blank" href="https://www.reading.ac.uk/met/"><img src="images/legacy-uor-home.png"
                                                                                  alt="University of Reading Logo"
                                                                                  class="footer_image"/></a>
-                    <a target="_blank" href="https://www.esa.int/"><img src="images/esa_cci_logo.jpeg"
+        <a target="_blank" href="https://www.esa.int/"><img src="images/esa_cci_logo.jpeg"
                                                                                alt="ESA CCI Logo" class="footer_image"/></a>
-                    <a target="_blank" href="https://climate.esa.int/en/projects/sea-surface-temperature/"><img src="images/esa_cci_sst.gif"
+        <a target="_blank" href="https://climate.esa.int/en/projects/sea-surface-temperature/"><img src="images/esa_cci_sst.gif"
                                                                                alt="ESA CCI SST Logo" class="footer_image"/></a>
-                    <a target="_blank" href="https://www.nceo.ac.uk/"><img src="images/nceo_img_logo_purple.svg"
+        <a target="_blank" href="https://www.nceo.ac.uk/"><img src="images/nceo_img_logo_purple.svg"
                                                                            alt="NERC Logo" class="footer_image"/></a>
-                    <a target="_blank" href="https://nerc.ukri.org/"><img src="images/nerc-long-logo-261.png" alt="NCEO Logo"
+        <a target="_blank" href="https://nerc.ukri.org/"><img src="images/nerc-long-logo-261.png" alt="NCEO Logo"
                                                                           class="footer_image"/></a><a target="_blank"
                                                                                                        href="https://stfc.ukri.org/"><img
                         src="images/STFCMediumColourTrans.png" alt="STFC Logo" class="footer_image"/></a>
