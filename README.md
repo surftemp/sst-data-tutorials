@@ -2,11 +2,13 @@
 
 This repository contains tutorials and documentation for using the C3S/CCI sea surface temperature dataset hosted by AWS opendata.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cgentemann/sst-data-tutorials/HEAD)
+
 Please visit https://surftemp.github.io/sst-data-tutorials/ for more details.
 
 A brief summary of this dataset is:
 
-> Global daily-mean sea surface temperatures, presented on a 0.05° latitude-longitude grid, with gaps between available daily observations filled by statistical means, spanning late 1981 to recent time.
+> Global daily-mean sea surface temperatures, presented on a 0.05Â° latitude-longitude grid, with gaps between available daily observations filled by statistical means, spanning late 1981 to recent time.
 >
 > Synthesised from multiple Earth orbiting satellites carrying infrared imagers from thousands of billions of individual measurements. Underlying observation resolution ranges from 1 to 20 km, and after gap filling the typical feature resolution is ~20 km. Suitable for large-scale oceanographic meteorological and climatological applications, such as evaluating or constraining environmental models or case-studies of marine heat wave events.
 >
