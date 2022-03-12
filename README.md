@@ -2,6 +2,8 @@
 
 This repository contains tutorials and documentation for using the C3S/CCI sea surface temperature dataset hosted by AWS opendata.
 
+You can click on the button below to run the tutorials.
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cgentemann/sst-data-tutorials/HEAD)
 
 
