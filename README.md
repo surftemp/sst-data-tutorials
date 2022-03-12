@@ -4,11 +4,6 @@ This repository contains tutorials and documentation for using the C3S/CCI sea s
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cgentemann/sst-data-tutorials/HEAD)
 
-To explore select button below 'Pangeo Binder AWS US-west1', and then, once the binder initializes, select the tutorial notebook you want to run.
-
-[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Pangeo+Binder&message=AWS+us-west-2&color=orange)](https://aws-uswest2-binder.pangeo.io/v2/gh/pangeo-gallery/default-binder/master?urlpath=git-pull?repo=https://github.com/cgentemann/sst-data-tutorials%26amp%3Burlpath=lab/tree/sst-data-tutorials)
-
-
 
 Please visit https://surftemp.github.io/sst-data-tutorials/ for more details.
 
