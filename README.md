@@ -2,7 +2,7 @@
 
 This repository contains tutorials and documentation for using the C3S/CCI sea surface temperature dataset hosted by AWS opendata.
 
-You can click on the button below to run the tutorials.
+You can click on the button below to run the tutorials. If you want to run them locally, look below for installing the environment locally.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cgentemann/sst-data-tutorials/HEAD)
 
@@ -25,7 +25,7 @@ A brief summary of this dataset is:
 
 Although the entire datset is over 300Gb in size, a subset of the data can be downloaded selectively to inspect particular areas, locations or time periods.  This tutorial will provide some basic examples of how to do this using the [xarray library]( http://xarray.pydata.org/en/stable/)
 
-# Install Instructions
+# Install locally Instructions
 1. If you don't have conda (either with Miniconda or the full AnacondaDistribution) already installed we recommend installing miniconda for latest Python 3.
 1. Then clone this repository and, at the root directory, you will find the environment.yml file. That files is basically the list of packages we are going to install.
 1. Now create the environment with conda env create --file environment.yml
