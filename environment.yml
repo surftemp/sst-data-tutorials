@@ -11,3 +11,4 @@ dependencies:
   - xarray=0.20.2
   - s3fs=2021.10.1
   - zarr=2.11.1
+  - requests

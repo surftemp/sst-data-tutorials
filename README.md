@@ -4,8 +4,7 @@ This repository contains tutorials and documentation for using the C3S/CCI sea s
 
 You can click on the button below to run the tutorials. If you want to run them locally, look below for installing the environment locally.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cgentemann/sst-data-tutorials/HEAD)
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/surftemp/sst-data-tutorials/HEAD)
 
 Please visit https://surftemp.github.io/sst-data-tutorials/ for more details.
 
@@ -27,8 +26,8 @@ Although the entire datset is over 300Gb in size, a subset of the data can be do
 
 # Install locally Instructions
 1. If you don't have conda (either with Miniconda or the full AnacondaDistribution) already installed we recommend installing miniconda for latest Python 3.
-1. Then clone this repository and, at the root directory, you will find the environment.yml file. That files is basically the list of packages we are going to install.
+1. Then clone this repository and, at the root directory, you will find the environment.yml file. That file contains the list of packages we are going to install.
 1. Now create the environment with conda env create --file environment.yml
-1. activate the environment with: conda activate OHW
-1. call jupyter-lab to get started! Happy hacking!!
+1. activate the environment with: `conda activate sstenv`
+1. run `jupyter notebook` to get started! Happy hacking!!
 
