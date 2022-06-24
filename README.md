@@ -27,7 +27,7 @@ Although the entire datset is over 300Gb in size, a subset of the data can be do
 # Install locally Instructions
 1. If you don't have conda (either with Miniconda or the full AnacondaDistribution) already installed we recommend installing miniconda for latest Python 3.
 1. Then clone this repository and, at the root directory, you will find the environment.yml file. That file contains the list of packages we are going to install.
-1. Now create the environment with conda env create --file environment.yml
+1. Now create the environment with `conda env create --file environment.yml`
 1. activate the environment with: `conda activate sstenv`
 1. run `jupyter notebook` to get started! Happy hacking!!
 
